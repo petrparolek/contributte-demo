@@ -4,7 +4,7 @@ namespace App\Domain\User;
 
 use App\Model\Database\Entity\User;
 use App\Model\Database\EntityManager;
-use App\Model\Security\Passwords;
+use Nette\Security\Passwords;
 
 class CreateUserFacade
 {
@@ -12,11 +12,16 @@ class CreateUserFacade
 	/** @var EntityManager */
 	private $em;
 
+	/** @var Passwords */
+	private $passwords;
+
 	public function __construct(
-		EntityManager $em
+		EntityManager $em,
+		Passwords $passwords
 	)
 	{
 		$this->em = $em;
+		$this->passwords = $passwords;
 	}
 
 	/**
@@ -30,7 +35,7 @@ class CreateUserFacade
 			$data['surname'],
 			$data['email'],
 			$data['username'],
-			Passwords::create()->hash($data['password'] ?? md5(microtime()))
+			$this->passwords->hash($data['password'])
 		);
 
 		// Set role

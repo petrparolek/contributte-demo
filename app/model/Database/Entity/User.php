@@ -7,7 +7,7 @@ use App\Model\Database\Entity\Attributes\TId;
 use App\Model\Database\Entity\Attributes\TUpdatedAt;
 use App\Model\Exception\Logic\InvalidArgumentException;
 use App\Model\Security\Identity;
-use App\Model\Utils\DateTime;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

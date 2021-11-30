@@ -21,7 +21,6 @@ services:
 		setup:
 			- setNamespace("Webapp")
 
-	security.passwords: App\Model\Security\Passwords
 	security.user: App\Model\Security\SecurityUser
 	security.authenticator: App\Model\Security\Authenticator\UserAuthenticator
 	security.authorizator: App\Model\Security\Authorizator\StaticAuthorizator
@@ -38,13 +37,3 @@ services:
 	- App\Domain\User\CreateUserFacade
 #	- App\Domain\Order\OrderLogSubscriber
 #	- App\Domain\Http\RequestLoggerSubscriber
-
-
-	# Console ================
-	- {class: App\Model\Console\HelloCommand, tags: {console.command: hello}}
-
-
-
-latte:
-	macros:
-		- App\Model\Latte\Macros::register

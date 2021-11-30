@@ -5,9 +5,9 @@ namespace App\Model\Security\Authenticator;
 use App\Model\Database\Entity\User;
 use App\Model\Database\EntityManager;
 use App\Model\Exception\Runtime\AuthenticationException;
-use App\Model\Security\Passwords;
 use Nette\Security\Authenticator;
 use Nette\Security\IIdentity;
+use Nette\Security\Passwords;
 
 final class UserAuthenticator implements Authenticator
 {
