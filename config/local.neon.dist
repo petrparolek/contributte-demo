@@ -3,10 +3,13 @@ parameters:
 
 	# Database
 	database:
+		driver: pdo_mysql
 		host: database
-		dbname: webapp
-		user: webapp
-		password: webapp
+		port: 3306
+		dbname: contributte-demo
+		user: contributte-demo
+		password: secret
+
 
 # For 0.0.0.0 instead of localhost
 # php -S 0.0.0.0 -t www
