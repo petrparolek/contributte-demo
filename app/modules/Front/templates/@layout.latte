@@ -3,8 +3,7 @@
 {block #head}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" defer/>
 	<link rel="stylesheet" href="{$basePath}/assets/front.css" defer/>
-	<script src="{$basePath}/assets/front.js" defer></script>
-{/}
+{/block}
 
 {block #main}
 	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -34,4 +33,8 @@
 			</div>
 		</footer>
 	</div>
-{/}
+{/block}
+
+{define #js}
+	<script src="{$basePath}/assets/front.js" defer></script>
+{/define}
